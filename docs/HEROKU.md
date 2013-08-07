@@ -352,7 +352,7 @@ You'll need an Amazon S3 account set up with a bucket configured with your app n
 
     ```diff
     - # config.action_controller.asset_host = "http://YOUR_CDN_HERE"
-    + config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+    + config.action_controller.asset_host = "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
     ```
 
 3. Get the access keys that were created for the new user and push the S3 configs to Heroku.
